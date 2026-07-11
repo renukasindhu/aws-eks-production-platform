@@ -7,3 +7,10 @@ application/frontend/__pycache__/
 
 # Log files
 *.log
+
+# terraform files
+terraform/.terraform
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+
