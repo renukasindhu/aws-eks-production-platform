@@ -100,6 +100,18 @@ else
     echo "Helm already installed."
 fi
 
+# Terraform
+echo "Checking Terraform..."
+if ! command -v terraform &> /dev/null
+then
+    echo "Installing Terraform..."
+    sudo dnf install -y dnf-plugins-core
+    sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+    sudo dnf install -y terraform
+else
+    echo "Terraform already installed."
+fi
+
 echo ""
 echo "Installed Versions"
 echo "=================="
@@ -127,6 +139,9 @@ eksctl version
 
 echo ""
 helm version
+
+echo ""
+terraform version
 
 echo ""
 echo "All Required Tools Installed Successfully."
