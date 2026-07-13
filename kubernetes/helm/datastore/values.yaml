@@ -1,0 +1,37 @@
+datastoreBe:
+  replicaCount: 1
+  image:
+    repository: renurs/datastore-backend
+    tag: latest
+  resources:
+    requests:
+      cpu: 100m
+      memory: 500Mi
+    limits:
+      cpu: "1"
+      memory: 1Gi
+  healthChecks:
+    livenessProbe:
+      httpGet:
+        path: /actuator
+        port: 8084
+      initialDelaySeconds: 20
+      periodSeconds: 3
+    readinessProbe:
+      httpGet:
+        path: /actuator
+        port: 8084
+      initialDelaySeconds: 20
+      periodSeconds: 3
+    startupProbe:
+      httpGet:
+        path: /actuator
+        port: 8084
+      initialDelaySeconds: 20
+      periodSeconds: 3
+      failureThreshold: 30
+config:
+  mysqlHost: jdbc:mysql://datastore-db.cr8uk4kwumm5.ap-south-1.rds.amazonaws.com:3306/datastore?createDatabaseIfNotExist=true
+  mysqlUsername: admin
+secret:
+  mysqlPassword: ZWtzcHJvZGRiMTIzNDU2Nw==
