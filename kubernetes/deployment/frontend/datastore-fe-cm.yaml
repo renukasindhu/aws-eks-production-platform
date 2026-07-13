@@ -4,5 +4,5 @@ metadata:
   name: datastore-fe-cm
   namespace: frontend
 data:
-  backendEndpoint: http://datastore-backend-svc.backend.svc.cluster.local:8081
+  backendEndpoint: http://datastore-backend-svc.backend.svc.cluster.local:8084
 
