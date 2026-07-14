@@ -55,9 +55,7 @@ The objective of this project was to build an end-to-end Kubernetes platform tha
 
 The platform combines AWS infrastructure, Kubernetes, GitOps, monitoring, logging, and networking components to deploy and manage a cloud-native application.
 
-| High-Level Architecture | AWS Infrastructure |
-|-------------------------|--------------------|
-| ![](docs/screenshots/architecture/architecture-diagram.png) | ![](docs/screenshots/architecture/aws-services.png) |
+![Overall Architecture](architecture/overall-architecture.png)
 
 ---
 
