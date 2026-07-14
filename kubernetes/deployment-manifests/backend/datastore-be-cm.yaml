@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: datastore-be-cm
-  namespace: backend
-
-data:
-  mysqlHost: "jdbc:mysql://datastore-db.cr8uk4kwumm5.ap-south-1.rds.amazonaws.com:3306/studentdb?createDatabaseIfNotExist=true"
-  mysqlUname: admin
