@@ -168,8 +168,7 @@ aws-eks-devops-platform/
 
 # Infrastructure Provisioning
 
-The AWS infrastructure for this platform is provisioned using **Terraform**, enabling repeatable and consistent deployments.
-
+The AWS infrastructure for this platform is provisioned using **Terraform**, enabling repeatable and consistent deployments. \
 The infrastructure was designed following a production-style architecture with isolated networking, managed Kubernetes, and a managed relational database.
 
 ## Provisioned Resources
@@ -186,11 +185,8 @@ The infrastructure was designed following a production-style architecture with i
 
 After the infrastructure is created, Terraform outputs are used to configure Kubernetes access and integrate the remaining platform components.
 
-### Terraform Infrastructure
-
-| Terraform Apply | Terraform State Resources |
-|-----------------|---------------------------|
-| ![](docs/screenshots/terraform/terraform-apply.png) | ![](docs/screenshots/terraform/terraform-state-list.png) |
+### Infrastructure Provisioning
+![Terraform State](docs/screenshots/terraform/terraform-state-list.png)
 
 ---
 
@@ -214,11 +210,11 @@ After provisioning the infrastructure, additional cluster configuration was comp
 - Configured the default StorageClass
 - Verified cluster connectivity before deploying workloads
 
-### Cluster Setup
+### Cluster Configuration
 
-| EKS Cluster | OIDC Provider | Imported Security Group |
-|-------------|---------------|-------------------------|
-| ![](docs/screenshots/aws/eks-cluster.png) | ![](docs/screenshots/aws/oidc.png) | ![](docs/screenshots/aws/security-group-import.png) |
+| EKS Cluster | Worker Nodes |
+|-------------|---------------|
+| ![EKS Cluster](docs/screenshots/cluster/eks-cluster.png) | ![Worker Nodes](docs/screenshots/cluster/nodes.png) | 
 
 ---
 
@@ -256,7 +252,7 @@ The application deployment includes:
 
 | Frontend | Backend |
 |-----------|---------|
-| ![](docs/screenshots/application/frontend.png) | ![](docs/screenshots/application/backend.png) |
+| ![Frontend](docs/screenshots/application/frontend.png) | ![Backend](docs/screenshots/application/backend.png) |
 
 ---
 
@@ -315,10 +311,7 @@ The GitOps workflow was validated by:
 - Scaling the backend application without executing any manual Kubernetes commands
 
 ### Argo CD
-
-| Application | Auto Sync |
-|--------------|-----------|
-| ![](docs/screenshots/argocd/application.png) | ![](docs/screenshots/argocd/synced.png) |
+![Argo CD](docs/screenshots/argocd/argocd.png)
 
 ---
 
@@ -403,9 +396,9 @@ These dashboards provide real-time visibility into:
 
 ### Monitoring
 
-| Prometheus | Grafana Dashboard |
+| Prometheus Targets | Grafana Dashboard |
 |------------|-------------------|
-| ![](docs/screenshots/monitoring/prometheus.png) | ![](docs/screenshots/monitoring/grafana-dashboard.png) |
+| ![Prometheus Targets](docs/screenshots/monitoring/prometheus-health.png) | ![Grafana Dashboard](docs/screenshots/monitoring/grafana-db-1.png) |
 
 ---
 
@@ -430,9 +423,9 @@ This verified the complete monitoring and alerting pipeline.
 
 ### Alert Validation
 
-| Prometheus Alert | Alertmanager |
+| Alert Firing | Alertmanager |
 |------------------|--------------|
-| ![](docs/screenshots/alerting/prometheus-alert.png) | ![](docs/screenshots/alerting/alertmanager.png) |
+| ![Alert Firing](docs/screenshots/monitoring/prometheus-alert-firing.png) | ![Alertmanager](docs/screenshots/monitoring/alert-manager.png) |
 
 ---
 
@@ -471,10 +464,7 @@ Capabilities include:
 - Visualize indexed data
 
 ### Logging
-
-| Kibana | Elasticsearch |
-|---------|---------------|
-| ![](docs/screenshots/logging/kibana.png) | ![](docs/screenshots/logging/elasticsearch.png) |
+![Kibana](docs/screenshots/logging/kibana-details.png)
 
 ---
 
@@ -493,11 +483,8 @@ Configured subdomains include:
 
 Each DNS record routes traffic through the AWS Application Load Balancer created by the AWS Load Balancer Controller, providing user-friendly URLs for accessing platform services.
 
-### Route 53
-
-| Hosted Zone | DNS Records |
-|-------------|-------------|
-| ![](docs/screenshots/networking/route53-zone.png) | ![](docs/screenshots/networking/route53-records.png) |
+## DNS
+![Route53](docs/screenshots/dns/r53-hostedzone-records.png)
 
 ---
 
