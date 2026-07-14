@@ -126,6 +126,7 @@ The platform combines AWS infrastructure, Kubernetes, GitOps, monitoring, loggin
 ```text
 aws-eks-devops-platform/
 │
+├── architecture/
 ├── application/
 │   ├── backend/                     # Java Spring Boot backend
 │   └── frontend/                    # Python Flask frontend
@@ -135,13 +136,6 @@ aws-eks-devops-platform/
 │   ├── cleanup-guide.md             # Infrastructure cleanup guide
 │   ├── architecture.md              # Architecture explanation
 │   └── screenshots/
-│       ├── architecture/
-│       ├── aws/
-│       ├── argocd/
-│       ├── grafana/
-│       ├── prometheus/
-│       ├── kibana/
-│       └── application/
 │
 ├── kubernetes/
 │   ├── deployment-manifests/
