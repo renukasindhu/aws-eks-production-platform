@@ -333,7 +333,7 @@ Amazon Route 53 maps custom DNS records to the AWS Application Load Balancer, pr
 
 | Ingress | AWS Load Balancer |
 |----------|-------------------|
-| ![](docs/screenshots/networking/ingress.png) | ![](docs/screenshots/networking/load-balancer.png) |
+| ![ingress](docs/screenshots/networking/ingress.png) | ![classic load balancer](docs/screenshots/networking/load-balancer.png) |
 
 ---
 
@@ -353,7 +353,7 @@ A custom StorageClass and PersistentVolumeClaim (PVC) dynamically provision Amaz
 
 | StorageClass | Persistent Volume |
 |--------------|-------------------|
-| ![](docs/screenshots/storage/ebs-sc.png)| ![](docs/screenshots/storage/ebs-pv.png) |
+| ![storage class](docs/screenshots/storage/ebs-sc.png)| ![persistant volume](docs/screenshots/storage/ebs-pv.png) |
 
 # Monitoring
 
@@ -461,7 +461,7 @@ Capabilities include:
 - Visualize indexed data
 
 ### Logging
-
+|------------------|--------------|
 | ![Kibana](docs/screenshots/logging/kibana-details.png) | ![Kibana logstash](docs/screenshots/logging/kibana-logstash.png) |
 
 ---
