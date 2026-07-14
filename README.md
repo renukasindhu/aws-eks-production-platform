@@ -461,6 +461,8 @@ Capabilities include:
 - Visualize indexed data
 
 ### Logging
+
+| Kibana Details | logstash |
 |------------------|--------------|
 | ![Kibana](docs/screenshots/logging/kibana-details.png) | ![Kibana logstash](docs/screenshots/logging/kibana-logstash.png) |
 
