@@ -151,7 +151,8 @@ aws-eks-devops-platform/
 │   └── alerting/
 │
 ├── scripts/
-│   └── setup-environment.sh
+|   ├── setup-environment.sh
+│   └── bootstrap-eks.sh
 │
 ├── terraform/
 │
