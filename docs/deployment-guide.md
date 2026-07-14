@@ -4,7 +4,7 @@ This guide explains how to deploy the AWS EKS DevOps Platform from infrastructur
 ---
 
 # Prerequisites
-Before deploying the project, ensure the following requirements are met: \
+Before deploying the project, ensure the following requirements are met:\
 - AWS Account
 - AWS CLI configured with appropriate permissions
 - Git
