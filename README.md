@@ -1,4 +1,4 @@
-# AWS EKS Platform with GitOps, Monitoring & Logging
+# AWS EKS DevOps Platform
 
 ![AWS](https://img.shields.io/badge/AWS-EKS-orange?logo=amazonaws)
 ![Terraform](https://img.shields.io/badge/Terraform-IaC-623CE4?logo=terraform)
@@ -13,8 +13,8 @@
 ---
 ## Project Overview
 
-This project demonstrates the deployment of a production-style cloud-native platform on **Amazon Elastic Kubernetes Service (Amazon EKS)** using modern DevOps practices.
-The infrastructure is provisioned using **Terraform**, while applications are containerized using **Docker** and deployed to Kubernetes using **Helm** and Kubernetes manifests. **Argo CD** is used to implement GitOps for automated backend application deployment.
+This project demonstrates the deployment of a production-style cloud-native platform on **Amazon Elastic Kubernetes Service (Amazon EKS)** using modern DevOps practices. \
+The infrastructure is provisioned using **Terraform**, while applications are containerized using **Docker** and deployed to Kubernetes using **Helm** and Kubernetes manifests. **Argo CD** is used to automate backend application deployment using GitOps principles. \
 The platform also integrates:
 - Prometheus for metrics collection
 - Grafana for visualization
@@ -151,7 +151,7 @@ aws-eks-devops-platform/
 │   └── alerting/
 │
 ├── scripts/
-│   └── install-tools.sh
+│   └── setup-environment.sh
 │
 ├── terraform/
 │
@@ -185,7 +185,7 @@ The infrastructure was designed following a production-style architecture with i
 
 After the infrastructure is created, Terraform outputs are used to configure Kubernetes access and integrate the remaining platform components.
 
-### Infrastructure Provisioning
+### Terraform State
 ![Terraform State](docs/screenshots/terraform/terraform-state-list.png)
 
 ---
@@ -212,9 +212,9 @@ After provisioning the infrastructure, additional cluster configuration was comp
 
 ### Cluster Configuration
 
-| EKS Cluster | Worker Nodes |
-|-------------|---------------|
-| ![EKS Cluster](docs/screenshots/cluster/eks-cluster.png) | ![Worker Nodes](docs/screenshots/cluster/nodes.png) | 
+| EKS Cluster | Worker Nodes | Namespaces |
+|-------------|---------------|---------------|
+| ![EKS Cluster](docs/screenshots/cluster/eks-cluster.png) | ![Worker Nodes](docs/screenshots/cluster/nodes.png) | [!Namespaces](docs/screenshots/cluster/namespaces.png) |
 
 ---
 
@@ -285,10 +285,7 @@ Application parameters such as:
 are configurable through Helm values.
 
 ### Helm Structure
-
-| Helm Chart | Helm Deployment |
-|------------|-----------------|
-| ![](docs/screenshots/helm/chart-structure.png) | ![](docs/screenshots/helm/helm-deployment.png) |
+[!Helm Details](docs/screenshots/helm/helm-details-1)
 
 ---
 
@@ -489,8 +486,7 @@ Each DNS record routes traffic through the AWS Application Load Balancer created
 ---
 
 # Documentation
-
-Detailed implementation guides are available in the **docs/** directory.
+Additional documentation is available in the docs directory.
 
 | Document | Description |
 |----------|-------------|
@@ -570,7 +566,3 @@ This project was built as part of my hands-on learning journey in AWS, Kubernete
 It demonstrates practical implementation of Infrastructure as Code, Kubernetes administration, GitOps, observability, networking, and cloud-native deployment practices on AWS.
 
 ---
-
-# Author
-**Renuka Sindhu Dommeti**
-GitHub: https://github.com/renukasindhu
