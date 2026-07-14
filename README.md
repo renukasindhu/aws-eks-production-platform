@@ -136,7 +136,7 @@ aws-eks-devops-platform/
 │   └── screenshots/
 │
 ├── kubernetes/
-│   ├── deployment-manifests/
+│   ├── deployment/
 │   │   ├── backend/
 │   │   └── frontend/
 │   │
